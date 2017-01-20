@@ -95,7 +95,7 @@ class templateParser
                         $sep = get_number_seperators();
                         $value = rtrim(rtrim(format_number($value), '0'), $sep[1]);//.$app_strings['LBL_PERCENTAGE_SYMBOL'];
                     } else {
-                        $value = currency_format_number($value, $params = array('currency_symbol' => false));
+                        //$value = currency_format_number($value, $params = array('currency_symbol' => false));
                     }
                 } else {
                     $value = '';

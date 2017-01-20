@@ -94,9 +94,8 @@ class templateParser
                     if ($repl_arr['aos_products_quotes_discount'] == 'Percentage') {
                         $sep = get_number_seperators();
                         $value = rtrim(rtrim(format_number($value), '0'), $sep[1]);//.$app_strings['LBL_PERCENTAGE_SYMBOL'];
-                    } else {
-                        $value = currency_format_number($value, $params = array('currency_symbol' => false));
                     }
+                    //Here should not use the currency_format_number function to format "$value", it is already a right currency value
                 } else {
                     $value = '';
                 }
